@@ -18,3 +18,10 @@ response = sqs.create_queue(
 
 # Print the URL of the newly created queue
 print(f'Queue created: {response["QueueUrl"]}')
+
+def send_message_to_sqs(message):
+    response = queue.send_message(MessageBody=message)
+    print(f"Message sent with ID: {response['MessageId']}")
+
+
+send_message_to_sqs("Hello, world!")
