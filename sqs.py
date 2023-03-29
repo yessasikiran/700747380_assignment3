@@ -2,7 +2,7 @@ import boto3
 import configparser
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('my-queue.ini')
 
 queue_name = config['default']['queue_name']
 sqs = boto3.resource('sqs')
