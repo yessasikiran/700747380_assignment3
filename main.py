@@ -18,5 +18,3 @@ response = sqs.create_queue(
 
 # Print the URL of the newly created queue
 print(f'Queue created: {response["QueueUrl"]}')
-
-
